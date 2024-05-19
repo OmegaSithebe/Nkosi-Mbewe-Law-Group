@@ -1,0 +1,369 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section Styles */
+#hero {
+    background: url('../images/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#hero .cta {
+    padding: 0.75rem 1.5rem;
+    background-color: #0066cc;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+/* General Section Styles */
+section {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Call to Action Button Styles */
+.cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #0066cc;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add transitions to links and buttons */
+a, .cta {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover, .cta:hover {
+    background-color: #004c99;
+    color: #fff;
+}
+
+/* Fade-in animation for sections */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Adjust animation delay for each section */
+#hero {
+    animation-delay: 0s;
+}
+
+#about {
+    animation-delay: 0.5s;
+}
+
+#services {
+    animation-delay: 1s;
+}
+
+#attorneys {
+    animation-delay: 1.5s;
+}
+
+#blog {
+    animation-delay: 2s;
+}
+
+#contact {
+    animation-delay: 2.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1.25rem;
+    }
+
+    .cta {
+        font-size: 1rem;
+    }
+}
+
+/* About Section */
+#about {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.about-content, .team {
+    flex: 1;
+}
+
+.about-content {
+    padding-right: 40px;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.team h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Services Section */
+#services {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.service {
+    margin-bottom: 50px;
+}
+
+.service h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.service ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Attorneys Section */
+#attorneys {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.attorney {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.attorney img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 30px
+}
+
+.attorney .info {
+    flex: 1;
+}
+
+.attorney h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.attorney p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.attorney ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Blog Section */
+#blog {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.article {
+    margin-bottom: 50px;
+}
+
+.article h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.article p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.contact-info, .contact-form, .map {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 40px;
+}
+
+.contact-info h3, .contact-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p, .contact-form label {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 5px;
+}
+
+.contact-info ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.map {
+    flex-basis: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 5px;
+}
