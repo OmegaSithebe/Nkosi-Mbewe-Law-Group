@@ -367,3 +367,55 @@ section {
     border: none;
     border-radius: 5px;
 }
+
+
+/*==========Get in touch with US=====================*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.consultation-block {
+    display: inline-block;
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 300px;
+}
+
+.consultation-image {
+    width: 100%;
+    height: auto;
+}
+
+.consultation-block p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
