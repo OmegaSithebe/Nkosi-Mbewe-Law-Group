@@ -369,6 +369,7 @@ section {
 }
 
 
+<<<<<<< HEAD
 
 /*==========Home Page - Our Service Section =============*/
 
@@ -433,22 +434,68 @@ textarea {
 
 textarea {
     resize: vertical;
+=======
+/*==========Get in touch with US=====================*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.consultation-block {
+    display: inline-block;
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 300px;
+}
+
+.consultation-image {
+    width: 100%;
+    height: auto;
+}
+
+.consultation-block p {
+    font-size: 18px;
+    margin: 10px 0;
+>>>>>>> 3eaf4f82c8cfb796c7ec1bd6bf7b5a0e251c0c8a
 }
 
 button {
     padding: 10px 20px;
+<<<<<<< HEAD
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+=======
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+>>>>>>> 3eaf4f82c8cfb796c7ec1bd6bf7b5a0e251c0c8a
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+<<<<<<< HEAD
 .container {
     max-width: 500px;
     margin: 100px auto;
@@ -501,3 +548,5 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+=======
+>>>>>>> 3eaf4f82c8cfb796c7ec1bd6bf7b5a0e251c0c8a
