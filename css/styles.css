@@ -72,11 +72,6 @@ section {
     text-align: center;
 }
 
-/* Contact Section Styles */
-#contact {
-    background-color: #f9f9f9;
-    padding: 80px 0;
-}
 
 /* Footer Styles */
 footer {
@@ -277,83 +272,142 @@ section {
     margin-left: 20px;
 }
 
-/* Blog Section */
-#blog {
+
+/* Contact Section Styles */
+.contactus {
     background-color: #f9f9f9;
     padding: 80px 0;
 }
 
-.article {
-    margin-bottom: 50px;
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.article h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.article p {
-    color: #666;
-    margin-bottom: 10px;
+.contactform-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-/* Contact Section */
-#contact {
-    background-color: #f9f9f9;
-    padding: 80px 0;
+.contactform-details {
+    flex: 1;
+    min-width: 300px;
 }
 
-.contact-info, .contact-form, .map {
-    flex-basis: calc(33.33% - 20px);
-    margin-bottom: 40px;
-}
-
-.contact-info h3, .contact-form h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-.contact-info p, .contact-form label {
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.contact-info ul {
+.contactform-details ul {
     list-style: none;
     padding: 0;
 }
 
-.contact-info ul li {
-    margin-bottom: 5px;
+.contactform-details li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.contact-info ul li a {
-    color: #333;
-    text-decoration: none;
+.contactform-details .icons {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #007bff;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+.contactform-details .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactform-details strong {
+    font-size: 1rem;
+}
+
+.input-field {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-control {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.contact-form textarea {
-    height: 150px;
+textarea.form-control {
+    resize: vertical;
+    height: 100px;
 }
 
-.contact-form button {
+.form-label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    pointer-events: none;
+    transition: 0.3s ease;
+    color: #666;
+}
+
+.form-control:focus + .form-label,
+.form-control:valid + .form-label,
+textarea:focus + .form-label,
+textarea:valid + .form-label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.75rem;
+    color: #007bff;
+}
+
+button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contactform-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
 
 .map {
     flex-basis: 100%;
@@ -368,8 +422,6 @@ section {
     border-radius: 5px;
 }
 
-
-<<<<<<< HEAD
 
 /*==========Home Page - Our Service Section =============*/
 
@@ -396,57 +448,6 @@ section {
     height: 100%;
 }
 
-/*Contact Us*/
-.homecontact {
-    max-width: 500px;
-    margin: 100px auto;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.homecontact-form {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #666;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-textarea {
-    resize: vertical;
-=======
-/*==========Get in touch with US=====================*/
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.header-image {
-    width: 100%;
-    height: auto;
-}
 
 main {
     text-align: center;
@@ -470,32 +471,8 @@ main {
 .consultation-block p {
     font-size: 18px;
     margin: 10px 0;
->>>>>>> 3eaf4f82c8cfb796c7ec1bd6bf7b5a0e251c0c8a
 }
 
-button {
-    padding: 10px 20px;
-<<<<<<< HEAD
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-=======
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
->>>>>>> 3eaf4f82c8cfb796c7ec1bd6bf7b5a0e251c0c8a
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-<<<<<<< HEAD
 .container {
     max-width: 500px;
     margin: 100px auto;
@@ -548,5 +525,3 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-=======
->>>>>>> 3eaf4f82c8cfb796c7ec1bd6bf7b5a0e251c0c8a
