@@ -14,9 +14,16 @@ body {
 
 /* Header Styles */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    position: relative;
+    background: #333; /* Change as needed */
+    color: white; /* Change as needed */
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header nav ul {
@@ -26,34 +33,62 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 1rem;
+    margin-right: 20px;
 }
 
 header nav ul li a {
-    color: #fff;
+    color: white; /* Change as needed */
     text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    height: 50px; /* Adjust size as needed */
+    object-fit: contain;
 }
 
 /* Hero Section Styles */
 #hero {
-    background: url('../images/hero.jpg') no-repeat center center/cover;
-    color: #fff;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    color: white;
     text-align: center;
-    padding: 0 1rem;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/Homepage.jpg'); /* Replace with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); /* Adjust the blur radius as needed */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+/* Ensure the content within #hero stays above the blurred background */
+#hero > * {
+    position: relative;
+    z-index: 1;
 }
 
 #hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #fff;
 }
 
 #hero p {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
@@ -166,50 +201,69 @@ section {
 
 /* About Section */
 #about {
-    background-color: #f9f9f9;
-    padding: 80px 0;
-}
-
-.about-content, .team {
-    flex: 1;
-}
-
-.about-content {
-    padding-right: 40px;
-}
-
-.about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.team h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 30px;
+    padding: 50px 20px; /* Adjust padding as needed */
 }
 
-.team-member img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+#about form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Adjust the max-width as needed */
+    margin: 0 auto;
 }
 
-.team-member h4 {
-    font-size: 1.5rem;
+#about label {
+    margin-top: 10px;
     margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
 }
 
-.team-member p {
-    color: #666;
+#about input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+#about button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF; /* Change button color as needed */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#about button:hover {
+    background-color: #0056b3; /* Change hover color as needed */
 }
 
 /* Services Section */
+#back-services ::before {
+    background-image: url('../images/ourServicesImage.webp');
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Adjust the blur radius as needed */
+    z-index: -1;
+}
+
 #services {
     background-color: #f9f9f9;
     padding: 80px 0;
@@ -234,121 +288,92 @@ section {
     margin-left: 20px;
 }
 
-
-
-/* Contact Section Styles */
-.contactus {
-    background-color: #f9f9f9;
-    padding: 80px 0;
-}
-
-.contact-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contactform-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.contactform-details {
-    flex: 1;
-    min-width: 300px;
-}
-
-.contactform-details ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contactform-details li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.contactform-details .icons {
-    font-size: 1.5rem;
-    margin-right: 10px;
-    color: #007bff;
-}
-
-.contactform-details .content {
-    display: flex;
-    flex-direction: column;
-}
-
-.contactform-details strong {
-    font-size: 1rem;
-}
-
-.input-field {
-    flex: 1;
-    min-width: 300px;
-}
-
-.form-group {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-textarea.form-control {
-    resize: vertical;
-    height: 100px;
-}
-
-.form-label {
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    pointer-events: none;
-    transition: 0.3s ease;
-    color: #666;
-}
-
-
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Footer Styles */
-footer {
-    background: #333;
-    color: #fff;
+/* Testimonials Section */
+/* css/styles.css */
+#testimonials {
+    padding: 50px 20px; /* Adjust padding as needed */
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
 }
+
+#testimonials h2 {
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between the grid items */
+    justify-items: center; /* Center items horizontally within the grid */
+}
+
+.testimonial {
+    background-color: #f9f9f9; /* Background color of each testimonial block */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+}
+
+.testimonial p {
+    margin: 0 0 10px; /* Space between paragraphs */
+}
+
+.testimonial strong {
+    display: block;
+    margin-top: 10px; /* Space above the strong element */
+    text-align: right; /* Align the name to the right */
+}
+
+
+
+/* Contact us Section Styles */
+
+/* css/styles.css */
+#contact-us {
+    text-align: center;
+    padding: 50px 20px; /* Adjust padding as needed */
+    background-color: #f2f2f2; /* Light background color */
+}
+
+#contact-us h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 24px; /* Adjust font size as needed */
+    color: #333; /* Darker text color */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the social media icons */
+    margin-bottom: 20px; /* Space below the social media icons */
+}
+
+.social-link img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Ensure the images are square */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.social-link img:hover {
+    transform: scale(1.1); /* Slightly enlarge the icons on hover */
+}
+
+#contact-us p {
+    margin: 10px 0; /* Space above and below the paragraphs */
+    font-size: 18px; /* Adjust font size as needed */
+    color: #555; /* Medium-dark text color */
+}
+
+#contact-us a {
+    color: #007BFF; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#contact-us a:hover {
+    color: #0056b3; /* Darker link color on hover */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
