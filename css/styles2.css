@@ -5,6 +5,28 @@
     font-family: "poppins", sans-serif;
 }
 
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
 body{
     background: url('../images/homecontactus.jpg');
     background-size: cover;
