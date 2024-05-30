@@ -7,9 +7,40 @@
 
 /* Header Styles */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #f8f8f8; /* Background color of the header */
     background: #333;
     color: #fff;
     padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between the navigation items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Color of the navigation links */
+    font-size: 18px; /* Font size of the navigation links */
+}
+
+.logo {
+    margin-left: auto; /* Pushes the logo to the right */
+}
+
+.logo img {
+    width: 10px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
 header nav ul {

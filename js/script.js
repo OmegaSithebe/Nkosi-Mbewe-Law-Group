@@ -57,3 +57,17 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         alert(error.message);
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const serviceCards = document.querySelectorAll(".service-card");
+
+    serviceCards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            card.style.boxShadow = "0 0 20px rgba(0, 0, 0, 0.2)";
+        });
+        card.addEventListener("mouseleave", () => {
+            card.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.1)";
+        });
+    });
+});
