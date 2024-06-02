@@ -12,6 +12,11 @@ body {
     color: #333;
 }
 
+.navbar{
+    width: 80%;
+    margin: 0 auto;
+}
+
 /* Header Styles */
 header {
     position: relative;
@@ -20,39 +25,72 @@ header {
     padding: 10px 20px; /* Adjust padding as needed */
 }
 
+header ::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
 nav {
+    float: right;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 3.5rem;
 }
 
 header nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 header nav ul li {
-    margin-right: 20px;
+    display: inline-block;
+    margin-right: 70px;
+    padding-top: 20px;
+
+    position: relative;
 }
 
 header nav ul li a {
-    color: white; /* Change as needed */
+    color: white; 
     text-decoration: none;
-    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: semi-bold;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+    color: #fff;
 }
 
-.logo img {
-    width: 100px; /* Adjust the size as needed */
-    height: auto; /* Maintain aspect ratio */
+header nav ul li a::before {
+    content: '';
+    display: block;
+    height: 3.8px;
+    background-color: #fff;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+header nav ul li a:hover::before {
+    width: 100%;
+}
+
+.logo {
+    float: left;
+    padding: 10px 0;
+    height: 40px;
+    width: auto;
 }
 
 /* Hero Section Styles */
 #hero {
+    height: 38rem;
     position: relative;
     color: white;
     text-align: center;
@@ -82,6 +120,7 @@ header nav ul li a:hover {
 }
 
 #hero h1 {
+    padding-top: 3rem;
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #fff;
@@ -200,6 +239,52 @@ section {
 }
 
 /* Home About Section */
+#about p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-weight: semi-bold;
+}
+
+#about .boldText{
+    font-weight: bold;
+}
+
+#about .updateText {
+    font-weight: semi-bold;
+}
+
+.registrationForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.rightRegistration{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightRegistration img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 20px;
+}
+
+
 #about {
     display: flex;
     flex-direction: column;
@@ -262,6 +347,14 @@ section {
     background-position: center;
     background-repeat: no-repeat; /* Adjust the blur radius as needed */
     z-index: -1;
+}
+
+#back-services h2 {
+    color: #fff;
+}
+
+.servicesimg-container img {
+    height: 40px;
 }
 
 #services {
@@ -420,6 +513,9 @@ h2{
     padding-bottom: 4rem;
 }
 
+.bullet {
+    font-weight: bold;
+}
 
 /* Our Servives Section */
 
@@ -473,6 +569,233 @@ h2{
     color: #666;
     line-height: 1.6;
 }
+
+.booking-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.booking-image {
+    width: 100%;
+    height: auto;
+}
+
+.booking-content {
+    padding: 20px;
+}
+
+.booking-content h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.booking-content p {
+    color: #777777;
+    font-size: 14px;
+    margin: 5px 0 20px;
+}
+
+.booking-button {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.booking-button:hover {
+    background-color: #0056b3;
+}
+
+
+/*-- Contact Us --*/
+.contact-body{
+    background: url('../images/homecontactus.jpg');
+    background-size: cover;
+    max-height: 100vh;
+}
+
+.contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.contact-wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    box-shadow: 4px 3px 4px #fff;
+}
+
+.contact-wrapper h2{
+    font-size: 3rem;
+    color: #fff;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.contact-wrapper h2::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 18px;
+    background: #e50d73;
+}
+
+.contactform-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+}
+
+.contactform-section ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactform-details .icons{
+    background: #333;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+.contactform-details li i{
+    display: flex;
+    align-self: center;
+    padding: 1rem;
+    color: #fff;
+    margin: 0.8rem 0;
+}
+
+.contactform-details li i{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+
+.contactform-details strong {
+    color: #fff;
+}
+
+.contactform-details p {
+    color: #fff;
+}
+
+.contactform-details{
+    position: relative;
+}
+
+.form-group .form-control{
+    width: 100%;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    resize: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group span {
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+    padding: 1rem;
+    pointer-events: none;
+    font-size: 0.8rem;
+    color: #ddd;
+    text-transform: uppercase;
+}
+
+.form-control:focus + .form-label,
+.form-control:valid + .form-label,
+textarea:focus + .form-label,
+textarea:valid + .form-label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.75rem;
+    color:#e50d73;
+}
+
+
+.input-field {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contacLogo {
+    display: flex;
+    
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea.form-control {
+    resize: vertical;
+    height: 100px;
+}
+
+.form-label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    pointer-events: none;
+    transition: 0.3s ease;
+    color: #666;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
 
 @media (max-width: 600px) {
     .service-card {
