@@ -33,43 +33,60 @@
         <!-- Brief Introduction -->
         <section id="about">
             <p>Thank you for contacting the Legal practice officer..the admitted and practing counsel by the <span class="boldText">Court of South Africa...</span> Alumni of the <span class="boldText">University of South Africa...</span><br>Please let us know how we can help you</p>
-            <div class="registrationForm">
-                <div class="rightRegistration">
-                    <img src="../Nkosi Mbewe Law Group/images/gavel.jpg" alt="">
+            <div class="main-section">
+                <div class="side-image">
+                    <img src="../Nkosi-Mbewe-Law-Group/images/gavel.png" alt="Left Image">
                 </div>
-                <div class="form-container">
+                <div class="registration-block">
                     <h2>Register</h2>
-                    <p class="updateText">Sign up to our page and get the latest updates.</p>
-                    <h2>Sign Up</h2>
-                    <form action="signup.php" method="post">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                        
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                        
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
-                        
-                        <button type="submit">Sign Up</button>
+                    <p>Sign up to our page and get the latest updates.</p>
+                    <form action="/submit-registration" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Submit</button>
+                        </div>
                     </form>
                 </div>
-                <div class="leftRegistration">
-                    <img src="../Nkosi Mbewe Law Group/images/gavel.jpg" alt="">
+                <div class="side-image">
+                    <img src="../Nkosi-Mbewe-Law-Group/images/gavel2.png" alt="Right Image">
                 </div>
             </div>
+        </div>
         </section>
         
         <!-- Services Overview -->
-        <section id="back-services">
+        <div class="homeServices-section">
             <h2>Our Services</h2>
-            <div class="servicesimg-container">
-                <img src="../Nkosi Mbewe Law Group/images/company law 5.jpg" alt="Company Law">
-                <img src="../Nkosi Mbewe Law Group/images/criminal litigation.jpg" alt="Criminal litigation">
-                <img src="../Nkosi Mbewe Law Group/images/insurance_law.jpg" alt="Insurance law">
-                <img src="../Nkosi Mbewe Law Group/images/generalLegalPractice.jpg" alt="General legal practice">
+            <div class="homeServices-container">
+                <div class="homeServices-card">
+                    <img src="../Nkosi-Mbewe-Law-Group/images/company.png" alt="Company law">
+                    <h3>Company Law</h3>
+                </div>
+                <div class="homeServices-card">
+                    <img src="../Nkosi-Mbewe-Law-Group/images/labour-law.png" alt="Labour Law">
+                    <h3>Labour Law</h3>
+                </div>
+                <div class="homeServices-card">
+                    <img src="../Nkosi-Mbewe-Law-Group/images/criminalLaw.png" alt="Civil Litigation & Family Law">
+                    <h3>Civil Litigation & Family Law</h3>
+                </div>
+                <div class="homeServices-card">
+                    <img src="../Nkosi-Mbewe-Law-Group/images/internationalRights.png" alt="Domestic and International human rights">
+                    <h3>Domestic and International human rights</h3>
+                </div>
+                <div class="homeServices-card">
+                    <img src="../Nkosi-Mbewe-Law-Group/images/mediaLaw2.png" alt="Media Law">
+                    <h3>Media Law</h3>
+                </div>
             </div>
-        </section>
+        </div>
         
         <!-- Testimonials -->
         <section id="testimonials">
