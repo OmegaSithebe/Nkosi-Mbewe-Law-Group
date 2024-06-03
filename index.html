@@ -8,17 +8,18 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="logo">
-                <img src="../Nkosi-Mbewe-Law-Group/images/NKOSIMBEWElawgrouplogo.png" alt="Logo">
-            </div>
-        </nav>
+        <div class="navbar">
+            <img src="../Nkosi Mbewe Law Group/images/nkosiMbeweLawGroup.png" alt="Logo" class="logo">
+        
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
     <main>
@@ -31,32 +32,42 @@
         
         <!-- Brief Introduction -->
         <section id="about">
-            <p>Thank you for contacting the Legal practice officer..the admitted and practing counsel by the <span>Court of South Africa...</span> Alumni of the University of South Africa...Please let us know how we can help you</p>
-            <h2>Register</h2>
-            <p>Sign up to our page and get the latest updates.</p>
-            <h2>Sign Up</h2>
-            <form action="signup.php" method="post">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-                
-                <button type="submit">Sign Up</button>
-            </form>
+            <p>Thank you for contacting the Legal practice officer..the admitted and practing counsel by the <span class="boldText">Court of South Africa...</span> Alumni of the <span class="boldText">University of South Africa...</span><br>Please let us know how we can help you</p>
+            <div class="registrationForm">
+                <div class="rightRegistration">
+                    <img src="../Nkosi Mbewe Law Group/images/gavel.jpg" alt="">
+                </div>
+                <div class="form-container">
+                    <h2>Register</h2>
+                    <p class="updateText">Sign up to our page and get the latest updates.</p>
+                    <h2>Sign Up</h2>
+                    <form action="signup.php" method="post">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+                <div class="leftRegistration">
+                    <img src="../Nkosi Mbewe Law Group/images/gavel.jpg" alt="">
+                </div>
+            </div>
         </section>
         
         <!-- Services Overview -->
         <section id="back-services">
             <h2>Our Services</h2>
             <div class="servicesimg-container">
-                <img src="https://via.placeholder.com/300" alt="Placeholder Image 1">
-                <img src="https://via.placeholder.com/300" alt="Placeholder Image 2">
-                <img src="https://via.placeholder.com/300" alt="Placeholder Image 3">
-                <img src="https://via.placeholder.com/300" alt="Placeholder Image 4">
+                <img src="../Nkosi Mbewe Law Group/images/company law 5.jpg" alt="Company Law">
+                <img src="../Nkosi Mbewe Law Group/images/criminal litigation.jpg" alt="Criminal litigation">
+                <img src="../Nkosi Mbewe Law Group/images/insurance_law.jpg" alt="Insurance law">
+                <img src="../Nkosi Mbewe Law Group/images/generalLegalPractice.jpg" alt="General legal practice">
             </div>
         </section>
         
