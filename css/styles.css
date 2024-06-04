@@ -375,14 +375,14 @@ form {
 }
 
 .homeServices-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .homeServices-card h3 {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -591,8 +591,8 @@ body {
 }
 
 .top-image img {
-    width: 100%;
-    height: auto;
+    width: 3rem;
+    height: 5rem;
 }
 
 .middle-section {

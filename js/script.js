@@ -71,3 +71,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navUL = document.querySelector('.navbar ul');
+
+    hamburger.addEventListener('click', () => {
+        navUL.classList.toggle('show');
+    });
+});
