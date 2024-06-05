@@ -307,6 +307,14 @@ nav {
     height: auto;
 }
 
+.homeContactLinks {
+    color: #ffffff;
+}
+
+.homeContactHeading {
+    font-weight: bold;
+}
+
 /* Footer Styles */
 footer {
     background: #333;
