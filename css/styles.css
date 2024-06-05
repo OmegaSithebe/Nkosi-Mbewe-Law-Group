@@ -12,80 +12,78 @@ body {
     color: #333;
 }
 
-.navbar{
+.navbar {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Header Styles */
 header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
     position: relative;
-    background: #333; /* Change as needed */
-    color: white; /* Change as needed */
-    padding: 10px 20px; /* Adjust padding as needed */
 }
 
-header ::after{
-    content: '';
-    display: table;
-    clear: both;
-}
 
 nav {
-    float: right;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3.5rem;
 }
 
-header nav ul {
+.nav-links {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
 }
 
-header nav ul li {
-    display: inline-block;
-    margin-right: 70px;
-    padding-top: 20px;
-
-    position: relative;
+.nav-links li {
+    margin-right: 20px;
 }
 
-header nav ul li a {
-    color: white; 
+.nav-links li a {
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: semi-bold;
 }
 
-header nav ul li a:hover {
+.nav-links li a:hover {
     color: #fff;
 }
 
-header nav ul li a::before {
+.nav-links li a::before {
     content: '';
     display: block;
     height: 3.8px;
     background-color: #fff;
-
     position: absolute;
     top: 0;
     width: 0%;
-
     transition: all ease-in-out 250ms;
 }
 
-header nav ul li a:hover::before {
+.nav-links li a:hover::before {
     width: 100%;
 }
 
 .logo {
-    float: left;
-    padding: 10px 0;
     height: 40px;
     width: auto;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.hamburger i {
+    font-size: 24px;
 }
 
 /* Hero Section Styles */
@@ -105,385 +103,266 @@ header nav ul li a:hover::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/Homepage.jpg'); /* Replace with the path to your background image */
+    background-image: url('../images/Homepage.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(8px); /* Adjust the blur radius as needed */
-    z-index: -1; /* Place the pseudo-element behind the content */
-}
-
-/* Ensure the content within #hero stays above the blurred background */
-#hero > * {
-    position: relative;
+    filter: blur(8px);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     z-index: 1;
 }
 
 #hero h1 {
-    padding-top: 3rem;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #fff;
+    font-size: 48px;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
 }
 
 #hero p {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 24px;
+    margin-bottom: 30px;
+    z-index: 2;
+    position: relative;
 }
 
 #hero .cta {
-    padding: 0.75rem 1.5rem;
-    background-color: #0066cc;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.25rem;
-}
-
-/* General Section Styles */
-section {
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-
-/* Footer Styles */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-}
-
-/* Call to Action Button Styles */
-.cta {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    background: #0066cc;
-    border-radius: 5px;
+    padding: 10px 20px;
+    background: #e8491d;
+    color: white;
     text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    z-index: 2;
+    position: relative;
 }
 
-/* Add smooth scrolling */
-html {
-    scroll-behavior: smooth;
+#hero .cta:hover {
+    background: #333;
 }
 
-/* Add transitions to links and buttons */
-a, .cta {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-a:hover, .cta:hover {
-    background-color: #004c99;
-    color: #fff;
-}
-
-/* Fade-in animation for sections */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-section {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-/* Adjust animation delay for each section */
-/*#hero {
-    animation-delay: 0s;
-}
-
-#about {
-    animation-delay: 0.5s;
-}
-
-#services {
-    animation-delay: 1s;
-}
-
-#attorneys {
-    animation-delay: 1.5s;
-}
-
-#blog {
-    animation-delay: 2s;
-}
-
-#contact {
-    animation-delay: 2.5s;
-}
-*/
-/* Responsive Design */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #hero h1 {
-        font-size: 2rem;
-    }
-
-    #hero p {
-        font-size: 1.25rem;
-    }
-
-    .cta {
-        font-size: 1rem;
-    }
-}
-
-/* Home About Section */
-#about p {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-weight: semi-bold;
-}
-
-#about .boldText{
+.boldText {
     font-weight: bold;
 }
 
-#about .updateText {
-    font-weight: semi-bold;
+/* About Section Styles */
+#about {
+    padding: 30px 20px;
+    text-align: center;
 }
 
 .main-section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-}
-
-
-
-.side-image img {
-    width: 30px;
-    height: 60px;
 }
 
 .registration-block {
-    flex: 2;
-    padding: 20px;
+    flex: 1 1 300px;
+    max-width: 600px;
     background-color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 .registration-block h2 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 10px;
-    color: #333;
 }
 
 .registration-block p {
-    font-size: 16px;
-    color: #666;
     margin-bottom: 20px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group {
+.registration-block .form-group {
     margin-bottom: 15px;
-    text-align: left;
 }
 
-.form-group label {
+.registration-block .form-group label {
     display: block;
+    font-size: 14px;
     margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
 }
 
-.form-group input {
+.registration-block .form-group input {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
 }
 
-.form-group button {
-    background-color: #0033cc;
-    color: white;
+.registration-block .form-group button {
+    display: inline-block;
     padding: 10px 20px;
-    border: none;
+    background: #e8491d;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
     border-radius: 5px;
+    transition: background 0.3s ease;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
 }
 
-.form-group button:hover {
-    background-color: #002299;
+.registration-block .form-group button:hover {
+    background: #333;
 }
 
-@media (max-width: 768px) {
-    .main-section {
-        flex-direction: column;
-    }
-    .side-image {
-        padding: 5px;
-    }
-    .registration-block {
-        margin-top: 10px;
-    }
-}
-
-/* Services Section */
-.homeServices-section {
+.side-image {
+    flex: 1 1 100px;
+    max-width: 200px;
+    margin: 20px;
     text-align: center;
-    background-image: url('../images/ourServicesImage.webp');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 20px;
-    color: #fff;
 }
 
-.homeServices-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #fff;
+.side-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Home Services Section */
+.homeServices-section {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
 }
 
 .homeServices-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
 }
 
 .homeServices-card {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    width: 220px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background-color: white;
     color: #333;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
 }
 
 .homeServices-card img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-.homeServices-card h3 {
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .homeServices-container {
-        flex-direction: column;
-        align-items: center;
-    }
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 /* Testimonials Section */
-/* css/styles.css */
 #testimonials {
-    padding: 50px 20px; /* Adjust padding as needed */
+    padding: 50px 20px;
+    background: #f4f4f4;
     text-align: center;
-}
-
-#testimonials h2 {
-    margin-bottom: 30px; /* Space below the heading */
 }
 
 .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px; /* Space between the grid items */
-    justify-items: center; /* Center items horizontally within the grid */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .testimonial {
-    background-color: #f9f9f9; /* Background color of each testimonial block */
+    background: white;
     padding: 20px;
+    margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
 }
 
 .testimonial p {
-    margin: 0 0 10px; /* Space between paragraphs */
+    margin-bottom: 10px;
 }
 
-.testimonial strong {
-    display: block;
-    margin-top: 10px; /* Space above the strong element */
-    text-align: right; /* Align the name to the right */
-}
-
-
-
-/* Contact us Section Styles */
-
-/* css/styles.css */
+/* Contact Us Section */
 #contact-us {
+    padding: 50px 20px;
+    background: #333;
+    color: white;
     text-align: center;
-    padding: 50px 20px; /* Adjust padding as needed */
-    background-color: #f2f2f2; /* Light background color */
-}
-
-#contact-us h2 {
-    margin-bottom: 20px; /* Space below the heading */
-    font-size: 24px; /* Adjust font size as needed */
-    color: #333; /* Darker text color */
 }
 
 .social-media {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between the social media icons */
-    margin-bottom: 20px; /* Space below the social media icons */
+    margin-bottom: 20px;
+}
+
+.social-link {
+    margin: 0 10px;
 }
 
 .social-link img {
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Ensure the images are square */
-    transition: transform 0.3s ease; /* Smooth transform transition */
+    width: 40px;
+    height: auto;
 }
 
-.social-link img:hover {
-    transform: scale(1.1); /* Slightly enlarge the icons on hover */
+/* Footer Styles */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
-#contact-us p {
-    margin: 10px 0; /* Space above and below the paragraphs */
-    font-size: 18px; /* Adjust font size as needed */
-    color: #555; /* Medium-dark text color */
-}
-
-#contact-us a {
-    color: #007BFF; /* Link color */
-    text-decoration: none;
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-#contact-us a:hover {
-    color: #0056b3; /* Darker link color on hover */
-}
-
-
-/* Responsive Design */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .contactform-section {
+    .nav-links {
+        display: none;
         flex-direction: column;
         align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
+    .navbar {
+        justify-content: space-between;
+    }
+
+    #hero h1 {
+        font-size: 36px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+
+    #hero .cta {
+        font-size: 16px;
+    }
+    
+    .registration-block, .side-image {
+        margin: 10px;
+    }
+    
+    .side-image {
+        display: none;
     }
 }
 

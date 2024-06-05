@@ -7,84 +7,88 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
-<body class="contact-body">
+<body>
     <header>
         <div class="navbar">
-            <img src="../Nkosi Mbewe Law Group/images/nkosiMbeweLawGroup.png" alt="Logo" class="logo">
-        
+            <div class="logo">
+                <img src="../Nkosi Mbewe Law Group/images/nkosiMbeweLawGroup.png" alt="Logo" class="logo">
+            </div>
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
         </div>
     </header>
 
-        <div class="contact-container">
-            <div class="contact-wrapper">
-                <h2>Contact Us</h2>
-                
-                <div class="contactform-section">
-                    <!-- Left side -->
-                    <div class="contactform-details">
-                        <ul>
-                            <li>
-                                <div class="icons">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="content">
-                                    <strong>Location:</strong>
-                                    <p>103 A Zandspruit Honeydew 2040</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="icons">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div class="content">
-                                    <strong>Email:</strong>
-                                    <p>Admin@nkosimbewelawgroup.co.za</p>
-                                    <p>Info@nkosimbewelawgroup.co.za</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="icons">
-                                    <i class="fa-solid fa-phone-volume"></i>
-                                </div>
-                                <div class="content">
-                                    <strong>Call:</strong>
-                                    <p>076 610 1628</p>
-                                </div>
-                            </li>
-                        </ul>
+    <div class="contact-container">
+        <div class="contact-wrapper">
+            <h2>Contact Us</h2>
+            
+            <div class="contactform-section">
+                <!-- Left side -->
+                <div class="contactform-details">
+                    <ul>
+                        <li>
+                            <div class="icons">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="content">
+                                <strong>Location:</strong>
+                                <p>103 A Zandspruit Honeydew 2040</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icons">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="content">
+                                <strong>Email:</strong>
+                                <p>Admin@nkosimbewelawgroup.co.za</p>
+                                <p>Info@nkosimbewelawgroup.co.za</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icons">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div class="content">
+                                <strong>Call:</strong>
+                                <p>076 610 1628</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right side -->
+                <div class="input-field">
+                    <div class="contact-logo">
+                        <img src="../Nkosi Mbewe Law Group/images/contactLogo.png" alt="Contact logo">
                     </div>
-                    <!-- Right side -->
-                    <div class="input-field">
-                        <div class="contacLogo">
-                            <img src="../Nkosi Mbewe Law Group/images/nkosiMbeweLawGroup.png" alt="Contact logo">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" required="required" class="form-control">
+                            <span class="form-label">Name</span>
                         </div>
-                        <form>
-                            <div class="form-group">
-                                <input type="text" required="required" class="form-control">
-                                <span class="form-label">Name</span>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" required="required" class="form-control">
-                                <span class="form-label">Email</span>
-                            </div>
-                            <div class="form-group">
-                                <textarea required="required" class="form-control"></textarea>
-                                <span class="form-label">Message</span>
-                            </div>
-                            <button type="submit">Send Message</button>
-                        </form>
-                    </div>
+                        <div class="form-group">
+                            <input type="email" required="required" class="form-control">
+                            <span class="form-label">Email</span>
+                        </div>
+                        <div class="form-group">
+                            <textarea required="required" class="form-control"></textarea>
+                            <span class="form-label">Message</span>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Law Group. All rights reserved.</p>
