@@ -18,6 +18,43 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #333;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 0;
+    display: block;
+}
+
+.navbar nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.navbar nav ul li a:hover::after {
+    width: 100%;
 }
 
 /* Header Styles */
@@ -35,15 +72,6 @@ nav {
     align-items: center;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-right: 20px;
-}
-
 .nav-links li a {
     color: white;
     text-decoration: none;
@@ -51,27 +79,8 @@ nav {
     font-weight: semi-bold;
 }
 
-.nav-links li a:hover {
-    color: #fff;
-}
-
-.nav-links li a::before {
-    content: '';
-    display: block;
-    height: 3.8px;
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    width: 0%;
-    transition: all ease-in-out 250ms;
-}
-
-.nav-links li a:hover::before {
-    width: 100%;
-}
-
 .logo {
-    height: 40px;
+    max-height: 50px;
     width: auto;
 }
 
@@ -226,10 +235,30 @@ nav {
 
 /* Home Services Section */
 .homeServices-section {
-    background-color: #333;
+    background-image: url('../images/ourServicesImage.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
     color: white;
     text-align: center;
     padding: 50px 20px;
+    position: relative; /
+}
+
+.homeServices-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.homeServices-section > * {
+    position: relative;
+    z-index: 2;
 }
 
 .homeServices-container {
@@ -378,23 +407,33 @@ footer {
 /*  About Us Section  */
 
 #about {
-    height: 100%;
     width: 100%;
+    padding: 2rem;
+    background-color: #f2f2f2; /* Light background color for better readability */
+    color: #333; /* Dark text color for contrast */
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
-h2{
+h2 {
     font-size: 38px;
+    margin-bottom: 1rem;
+    text-align: center; /* Center align heading */
 }
 
-.aboutcontainer{
-    padding-top: 2rem;
-    padding-left: 10rem;
-    padding-right: 10rem;
+.aboutcontainer {
+    padding: 2rem 10rem;
+    box-sizing: border-box;
 }
 
-.aboutcontainerTopImage{
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+.aboutcontainerTopImage {
+    padding: 2rem 0 4rem 0;
+    text-align: center;
+}
+
+.aboutcontainerTopImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Adds rounded corners to the image */
 }
 
 .bullet {
@@ -403,7 +442,51 @@ h2{
 
 .about-content ul {
     list-style-type: none;
+    padding-left: 0;
 }
+
+.about-content ul li {
+    margin-bottom: 1rem;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about-content ul li::before {
+    content: '•'; /* Adds a bullet point before each list item */
+    position: absolute;
+    left: 0;
+    color: #007BFF; /* Bullet point color */
+    font-size: 20px;
+}
+
+.nkosiBold {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .aboutcontainer {
+        padding: 2rem 4rem;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutcontainer {
+        padding: 1rem 2rem;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .aboutcontainerTopImage {
+        padding: 1rem 0 2rem 0;
+    }
+}
+
 
 /* Our Servives Section */
 
@@ -477,11 +560,21 @@ body {
     padding: 20px;
 }
 
-.top-image img {
-    width: 3rem;
-    height: 5rem;
+.top-image {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    position: relative;
+    padding-top: 2rem;
 }
 
+.top-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .middle-section {
     display: flex;
     justify-content: center;
@@ -561,136 +654,105 @@ body {
 
 
 /*-- Contact Us --*/
-.contact-body{
-    background: url('../images/homecontactus.jpg');
-    background-size: cover;
-    max-height: 100vh;
+/* General Styling */
+.contactBody {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
-.contact-container{
+/* Contact Body */
+.contactBody {
+    background: url('../images/homecontactus.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Contact Container */
+.contact-container {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
 }
 
+/* Contact Wrapper */
 .contact-wrapper {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 0 1rem;
-    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
     width: 100%;
-    box-shadow: 4px 3px 4px #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.contact-wrapper h2{
-    font-size: 3rem;
+.contact-wrapper h2 {
+    font-size: 2.5rem;
     color: #fff;
-    padding: 2rem 1rem;
-    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e50d73;
+    text-align: center;
 }
 
-.contact-wrapper h2::after {
-    content: "";
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    width: 18px;
-    background: #e50d73;
+.contact-wrapper .contactUnderline {
+    width: 100px;
+    height: 4px;
+    background-color: #e50d73;
+    margin: 0 auto;
 }
 
-.contactform-section{
+/* Contact Form Section */
+.contactform-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
 }
 
 .contactform-section ul {
     list-style-type: none;
-    display: flex;
-    flex-direction: column;
+    padding-left: 0;
 }
 
-.contactform-details .icons{
+.contactform-details {
+    position: relative;
+    color: #fff;
+}
+
+.contactform-details .icons {
     background: #333;
     width: 50px;
     height: 50px;
     margin-right: 1rem;
     border-radius: 50%;
-}
-
-.contactform-details li i{
-    display: flex;
-    align-self: center;
-    padding: 1rem;
-    color: #fff;
-    margin: 0.8rem 0;
-}
-
-.contactform-details li i{
-    font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: inherit;
 }
 
-
-.contactform-details strong {
-    color: #fff;
-}
-
-.contactform-details p {
-    color: #fff;
-}
-
-.contactform-details{
-    position: relative;
-}
-
-.form-group .form-control{
-    width: 100%;
-    outline: none;
-    border: 1px solid #ddd;
-    padding: 0.8rem;
-    margin: 1rem 0;
-    resize: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.form-group span {
-    position: absolute;
-    top: 0.8rem;
-    left: 0;
-    padding: 1rem;
-    pointer-events: none;
-    font-size: 0.8rem;
-    color: #ddd;
-    text-transform: uppercase;
-}
-
-.form-control:focus + .form-label,
-.form-control:valid + .form-label,
-textarea:focus + .form-label,
-textarea:valid + .form-label {
-    top: -10px;
-    left: 10px;
-    font-size: 0.75rem;
-    color:#e50d73;
-}
-
-
-.input-field {
-    flex: 1;
-    min-width: 300px;
-}
-
-.contacLogo {
+.contactform-details li {
     display: flex;
-    
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
+.contactform-details li i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.contactform-details strong,
+.contactform-details p {
+    margin: 0;
+}
+
+/* Form Group */
 .form-group {
     position: relative;
     margin-bottom: 20px;
@@ -701,11 +763,17 @@ textarea:valid + .form-label {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #e50d73;
 }
 
 textarea.form-control {
     resize: vertical;
-    height: 100px;
+    height: 150px;
 }
 
 .form-label {
@@ -714,9 +782,20 @@ textarea.form-control {
     left: 15px;
     pointer-events: none;
     transition: 0.3s ease;
-    color: #666;
+    color: #ccc;
 }
 
+.form-control:focus + .form-label,
+.form-control:valid + .form-label,
+textarea:focus + .form-label,
+textarea:valid + .form-label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.75rem;
+    color: #e50d73;
+}
+
+/* Button Styling */
 button {
     padding: 10px 20px;
     background-color: #007bff;
@@ -725,10 +804,51 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 1rem;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contactform-section {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-wrapper h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-wrapper {
+        padding: 1rem;
+    }
+
+    .contact-wrapper h2 {
+        font-size: 1.75rem;
+    }
+
+    .contactform-details .icons {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .form-control {
+        padding: 8px;
+    }
+
+    .form-label {
+        font-size: 0.75rem;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.875rem;
+    }
 }
 
 /* Footer Styles */
