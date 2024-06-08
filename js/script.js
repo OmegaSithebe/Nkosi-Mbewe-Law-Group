@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Hamburger menu functionality
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.querySelector('nav ul.nav-links');
-    
+
     hamburger.addEventListener('click', () => {
         console.log('Hamburger clicked');
-        navMenu.classList.toggle('active');
+        navMenu.classList.toggle('show');
     });
 
     // Form submission validation and handling
