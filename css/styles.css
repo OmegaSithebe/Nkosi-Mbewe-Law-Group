@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -151,15 +155,16 @@ nav {
     background: #333;
 }
 
-.home-logo {
-    width: 200px;
-    height: auto;
-    margin-top: 20px;
+
+.heroImage{
+    position: absolute;
+    width: 20px;
+    height: 10px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .nav-links {
+    .navbar .nav-links {
         display: none;
         flex-direction: column;
         align-items: center;
@@ -289,6 +294,12 @@ nav {
     max-width: 100%;
     height: auto;
 }
+
+#registrationForm{
+    color: black;
+    display: block;
+}
+
 
 /* Home Services Section */
 .homeServices-section {
@@ -519,6 +530,11 @@ h2 {
 
 .nkosiBold {
     font-weight: bold;
+}
+
+#callBooking{
+    color: black;
+    display: block;
 }
 
 @media (max-width: 768px) {
@@ -861,6 +877,17 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+#msg{
+    color: #fff;
+    display: block;
+}
+
+.contactLogo{
+    width: 100%;
+    max-width: 600px;
+    object-fit: cover;
 }
 
 /* Responsive Design */

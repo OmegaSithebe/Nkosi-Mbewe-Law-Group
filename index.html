@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Law Group - Home</title>
-    <!-- Link to CSS file -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="../Nkosi Mbewe Law Group/images/NKOSIMBEWElawgrouplogo.png" alt="Logo" class="logo">
+                <img src="./images/nkosiMbeweLawGroupLogo.png" alt="Logo" class="logo">
             </div>
             <nav>
                 <ul class="nav-links">
@@ -32,10 +30,15 @@
     <main>
         <!-- Hero Section -->
         <section id="hero">
-            <h1>Welcome to Our Law Group</h1>
-            <p>Your trusted legal advisors</p>
-            <a href="intouch.html" class="cta">Get in Touch</a>
-            <img src="../Nkosi Mbewe Law Group/images/NKOSIMBEWElawgrouplogo.png" alt="Law Group Logo" class="hero-img">
+            <div>
+                <h1>Welcome to Our Law Group</h1>
+                <p>Your trusted legal advisors</p>
+                <a href="intouch.html" class="cta">Get in Touch</a>
+            </div>
+            <div class="heroImage">
+                
+            </div>
+            
         </section>
         
         <!-- Brief Introduction -->
@@ -43,12 +46,12 @@
             <p>Thank you for contacting the Legal practice officer..the admitted and practicing counsel by the <span class="boldText">Court of South Africa...</span> Alumni of the <span class="boldText">University of South Africa...</span><br>Please let us know how we can help you</p>
             <div class="main-section">
                 <div class="side-image">
-                    <img src="../Nkosi Mbewe Law Group/images/gavel.png" alt="Left Image">
+                    <img src="./images/gavel.png" alt="Left Image">
                 </div>
                 <div class="registration-block">
                     <h2>Register</h2>
                     <p>Sign up to our page and get the latest updates.</p>
-                    <form action="submit_home_registration.php" method="POST">
+                    <form action="submit_home_registration.php" method="POST" name="submit-to-google-sheet">
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" required>
@@ -61,9 +64,10 @@
                             <button type="submit">Submit</button>
                         </div>
                     </form>
+                    <span id="registrationForm"></span>
                 </div>
                 <div class="side-image">
-                    <img src="../Nkosi Mbewe Law Group/images/gavel2.png" alt="Right Image">
+                    <img src="./images/gavel2.png" alt="Right Image">
                 </div>
             </div>
         </section>
@@ -73,23 +77,23 @@
             <h2>Our Services</h2>
             <div class="homeServices-container">
                 <div class="homeServices-card">
-                    <img src="../Nkosi Mbewe Law Group/images/company.png" alt="Company law">
+                    <img src="./images/company.png" alt="Company law">
                     <h3>Company Law</h3>
                 </div>
                 <div class="homeServices-card">
-                    <img src="../Nkosi Mbewe Law Group/images/labour-law.png" alt="Labour Law">
+                    <img src="./images/labour-law.png" alt="Labour Law">
                     <h3>Labour Law</h3>
                 </div>
                 <div class="homeServices-card">
-                    <img src="../Nkosi Mbewe Law Group/images/criminalLaw.png" alt="Civil Litigation & Family Law">
+                    <img src="./images/criminalLaw.png" alt="Civil Litigation & Family Law">
                     <h3>Civil Litigation & Family Law</h3>
                 </div>
                 <div class="homeServices-card">
-                    <img src="../Nkosi Mbewe Law Group/images/internationalRights.png" alt="Domestic and International human rights">
+                    <img src="./images/internationalRights.png" alt="Domestic and International human rights">
                     <h3>Domestic and International Human Rights</h3>
                 </div>
                 <div class="homeServices-card">
-                    <img src="../Nkosi Mbewe Law Group/images/mediaLaw2.png" alt="Media Law">
+                    <img src="./images/mediaLaw2.png" alt="Media Law">
                     <h3>Media Law</h3>
                 </div>
             </div>
@@ -101,7 +105,7 @@
             <div class="testimonials-grid">
                 <div class="testimonial">
                     <p>"The team at this law group is exceptional. They helped me through a very difficult time with professionalism and care."</p>
-                    <p><strong>- Zinhle Khumalo</strong></p>
+                    <p><strong>- John Doe</strong></p>
                 </div>
                 <div class="testimonial">
                     <p>"Their legal advice was invaluable and their representation in court was top-notch. Highly recommend."</p>
@@ -114,17 +118,17 @@
         <section id="contact-us">
             <h2>You can also contact us by</h2>
             <div class="social-media">
-                <a href="https://www.facebook.com/yourpage" target="_blank" class="social-link">
-                    <img src="../Nkosi Mbewe Law Group/images/facebook.png" alt="Facebook">
+                <a href="https://www.facebook.com/groups/1901170070344029" target="_blank" class="social-link">
+                    <img src="./images/facebook.png" alt="Facebook">
                 </a>
-                <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-link">
-                    <img src="../Nkosi Mbewe Law Group/images/instragram.png" alt="Instagram">
+                <a href="https://www.instagram.com/thelawsocietyofsouthafrica/?hl=en" target="_blank" class="social-link">
+                    <img src="./images/instragram.png" alt="Instagram">
                 </a>
-                <a href="https://www.tiktok.com/@yourprofile" target="_blank" class="social-link">
-                    <img src="../Nkosi Mbewe Law Group/images/tiktok.png" alt="TikTok">
+                <a href="https://www.tiktok.com/@jrlawgroup" target="_blank" class="social-link">
+                    <img src="./images/tiktok.png" alt="TikTok">
                 </a>
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-link">
-                    <img src="../Nkosi Mbewe Law Group/images/linkedin.png" alt="LinkedIn">
+                <a href="https://www.linkedin.com/jobs/view/3877281735/?alternateChannel=search&refId=eb1dbaaa-c6f4-466b-9dc1-101bebeb7a49&trackingId=RsgJq8tsSxikSGvx9ITP7g%3D%3D" target="_blank" class="social-link">
+                    <img src="./images/linkedin.png" alt="LinkedIn">
                 </a>
             </div>
             <p><span class="homeContactHeading">Email: </span><a class="homeContactLinks" href="mailto:admin@nkosimbewelawgroup.co.za">admin@nkosimbewelawgroup.co.za</a></p>
@@ -141,5 +145,24 @@
     
     <!-- Link to JavaScript file -->
     <script src="js/script.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzTutTvxtIUQKneo8VaXctS92hYwSunFUxDfh8wmgW2p3HZRSeEDiyrI3xF_0QO-1mf/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const registrationForm = document.getElementById("registrationForm")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                registrationForm.innerHTML = "Your details have been Submitted Successfully"
+                setTimeout(function(){
+                    registrationForm.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>

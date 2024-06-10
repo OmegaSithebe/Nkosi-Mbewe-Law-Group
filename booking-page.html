@@ -11,7 +11,7 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="../Nkosi Mbewe Law Group/images/NKOSIMBEWElawgrouplogo.png" alt="Logo" class="logo">
+                <img src="./images/nkosiMbeweLawGroupLogo.png" alt="Logo" class="logo">
             </div>
             <nav>
                 <ul class="nav-links">
@@ -33,7 +33,7 @@
             <p>We look forward to discussing your rights and assisting you with our expertise.</p>
         </header>
         <main class="bookingMain">
-            <form  class="bookingForm" action="book_a_call.php" method="POST">
+            <form  class="bookingForm" action="book_a_call.php" method="POST" name="submit-to-google-sheet">
                 <div class="bookingForm-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -54,8 +54,30 @@
                     <button type="submit">Book Now</button>
                 </div>
             </form>
+            <span id="callBooking"></span>
 
         </main>
     </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyWNiYRcdUZmsWKZ_K9IDgnyX_gG_ESQJgZTxx3J5Y0c0tqelcpTjEcAfZ8e9OkYyk8/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const callBooking = document.getElementById("callBooking")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                callBooking.innerHTML = "Thank you for booking a call with us. We will be in touch with you shortly."
+                setTimeout(function(){
+                    callBooking.innerHTML = ""
+                }, 10000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
 </body>
 </html>

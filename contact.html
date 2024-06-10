@@ -11,7 +11,7 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="../Nkosi Mbewe Law Group/images/NKOSIMBEWElawgrouplogo.png" alt="Logo" class="logo">
+                <img src="./images/nkosiMbeweLawGroupLogo.png" alt="Logo" class="logo">
             </div>
             <nav>
                 <ul class="nav-links">
@@ -66,7 +66,7 @@
                 </div>
                 <!-- Right side -->
                 <div class="input-field">
-                    <form action="contact.php" method="POST">
+                    <form action="contact.php" method="POST" name="submit-to-google-sheet">
                         <div class="form-group">
                             <input type="text" name="name" required="required" class="form-control">
                             <span class="form-label">Name</span>
@@ -81,6 +81,7 @@
                         </div>
                         <button type="submit">Send Message</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -90,5 +91,24 @@
         <p>&copy; 2024 Law Group. All rights reserved.</p>
     </footer>
     <script src="js/scripts.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyFXBz8O4mBoFqpb9YU5hBugu2udapziCbwbVMZrNjzFQiFvwyQMw2MFp1oE7Uq77aR/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
